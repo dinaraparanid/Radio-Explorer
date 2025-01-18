@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_primary">#FF158191</color>
+
+    <color name="nav_bar_tab_selected">#FF76E7CD</color>
+    <color name="nav_bar_tab_unselected">#FFBFDBF7</color>
+    <color name="nav_bar_background">#FF1F2041</color>
+</resources>

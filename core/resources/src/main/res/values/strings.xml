@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_stations">Stations</string>
+    <string name="tab_favourites">Favourites</string>
+    <string name="tab_about_app">About App</string>
+</resources>
