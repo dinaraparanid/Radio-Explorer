@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.paranid5.radio_explorer.core.resources"
+    namespace = "com.paranid5.radio_explorer.feature.stations"
     compileSdk = 35
 
     defaultConfig {
@@ -33,11 +33,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain:station"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

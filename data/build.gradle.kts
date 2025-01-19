@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
@@ -7,17 +7,14 @@ plugins {
 }
 
 android {
-    namespace = "com.paranid5.radio_explorer"
+    namespace = "com.paranid5.radio_explorer.data"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.paranid5.radio_explorer"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -36,33 +33,29 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        dataBinding = true
-    }
 }
 
 dependencies {
-    implementation(project(":data"))
-
-    implementation(project(":core:resources"))
-
-    implementation(project(":feature:root"))
+    api(project(":domain:station"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.navigation.fragment)
-    implementation(libs.androidx.constraintlayout)
     implementation(libs.material)
 
-    implementation(libs.hilt.android)
-    implementation(libs.hilt.android.graddle.plugin)
+    api(libs.kotlinx.serialization.json)
+
+    api(libs.rxjava)
+    api(libs.rxandroid)
+
+    api(libs.retrofit)
+    api(libs.retrofit.rxjava)
+    api(libs.retrofit.kotlinx.serialization)
+    api(libs.okhttp)
+    api(libs.okhttp.logging)
+
+    api(libs.hilt.android)
+    api(libs.hilt.android.graddle.plugin)
     kapt(libs.hilt.compiler)
-}
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
 }
 
 kapt {
