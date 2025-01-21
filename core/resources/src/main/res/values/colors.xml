@@ -5,4 +5,9 @@
     <color name="nav_bar_tab_selected">#FF76E7CD</color>
     <color name="nav_bar_tab_unselected">#FFBFDBF7</color>
     <color name="nav_bar_background">#FF1F2041</color>
+    
+    <color name="search_field_background">#FFFFFFFF</color>
+    <color name="search_field_border">#FF1F2041</color>
+    
+    <color name="text_primary">#FFFFFFFF</color>
 </resources>

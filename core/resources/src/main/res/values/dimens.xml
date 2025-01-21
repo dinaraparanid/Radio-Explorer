@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_zero">0dp</dimen>
+    <dimen name="padding_minimum">2dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_extra_medium">16dp</dimen>
+    <dimen name="padding_big">20dp</dimen>
+    <dimen name="padding_extra_big">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="padding_extra_large">48dp</dimen>
+    <dimen name="padding_enormous">64dp</dimen>
+
+    <dimen name="border_minimum">0.5dp</dimen>
+    <dimen name="border_extra_small">1dp</dimen>
+    <dimen name="border_small">2dp</dimen>
+    <dimen name="border_medium">4dp</dimen>
+
+    <dimen name="corner_minimum">2dp</dimen>
+    <dimen name="corner_extra_small">4dp</dimen>
+    <dimen name="corner_small">8dp</dimen>
+    <dimen name="corner_medium">12dp</dimen>
+    <dimen name="corner_extra_medium">16dp</dimen>
+    
+    <dimen name="text_caption_sm">10sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_h1">18sp</dimen>
+    <dimen name="text_h2">20sp</dimen>
+    <dimen name="text_h3">24sp</dimen>
+    <dimen name="text_h4">32sp</dimen>
+</resources>

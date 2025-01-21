@@ -3,4 +3,8 @@
     <string name="tab_stations">Stations</string>
     <string name="tab_favourites">Favourites</string>
     <string name="tab_about_app">About App</string>
+
+    <string name="stations_search_field_hint">Radio stations</string>
+    <string name="stations_recent_stations">Recent Stations</string>
+    <string name="stations_playing_now">Playing Now</string>
 </resources>

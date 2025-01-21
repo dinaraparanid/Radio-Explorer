@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="reducer"
+            type="com.paranid5.radio_explorer.feature.stations.StationsReducer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_primary">
+
+        <EditText
+            android:id="@+id/search_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{reducer.searchQuery}"
+            android:hint="@string/stations_search_field_hint"
+            android:inputType="text"
+            android:background="@drawable/search_field_shape"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/padding_extra_medium"
+            android:layout_marginStart="@dimen/padding_extra_medium"
+            android:layout_marginEnd="@dimen/padding_extra_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingEnd="@dimen/padding_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_extra_medium">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_extra_medium"
+                android:text="@string/stations_recent_stations"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_h2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_small"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_stations"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/padding_small"
+                android:paddingHorizontal="@dimen/padding_extra_medium"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{reducer.playing ? View.VISIBLE : View.GONE}"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_extra_medium">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_extra_medium"
+                android:text="@string/stations_playing_now"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_h2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/padding_small"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
